@@ -1,0 +1,633 @@
+
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+    var _speedMark = new Date();
+</script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+<meta name="description" content="一个django初学者的个人博客">
+<meta name="keywords" content="一个django出学者的个人博客">
+<title>Qsing - Welcome to my blog</title>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for the latest blogs to dannysite.com" href="/blog/rss/"/>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+<style type="text/css">
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    -ms-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+}
+body {
+	font-family: DengXian, 'Microsoft Yahei', Tahoma, Arial, Helvetica, Simsun, STHeiti;
+	font-size: 14px;
+	-ms-text-size-adjust: none;
+	background-color: #282828;
+	margin: 0;
+	padding: 0;
+	color: #1c1c1c;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+input {
+	outline: none;
+}
+textarea {
+	outline: none;
+}
+a {
+	color: #005059;
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+a:link {
+	color: #005059;
+	text-decoration: none;
+}
+a:visited {
+	color: #005059;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	color: #ff8f21 !important;
+	text-decoration: underline;
+}
+.text-focus {
+	color: #ff8f21 !important;
+}
+.box-focus {
+	color: #FFF !important;
+	background-color: #005059 !important;
+}
+.text-highlight {
+    color: #ff8f21 !important;
+}
+.container {
+	background-color: #fff;
+    _width: 1175px;
+	max-width: 1275px;
+	min-width: 320px;
+    min-width/*\**/: 1075px\9;
+	min-width: 1175px\9\0;
+	margin: 0 auto;
+}
+.header {
+	position: relative;
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+    background-color: #005059;
+}
+.header .header-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	margin-top: 20px;
+}
+.header .header-nav .header-nav-content {
+	width: 98%;
+	margin: 0 auto;
+	padding: 10px 0px;
+	border-top-style: solid;
+	border-top-color: #005059;
+	border-top-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #005059;
+	border-bottom-width: 2px;
+}
+.header .header-nav .header-nav-content .logo-click {
+	text-decoration: none;
+}
+.header .header-nav .header-nav-content .logo {
+	width: 120px;
+	height: 76px;
+	padding-left: 30px;
+	text-align: right;
+	font-size: 2.4em;
+}
+.header .header-nav .header-nav-content .logo span {
+	text-decoration: none;
+}
+.header .header-nav .header-nav-content .logo .logo-top{
+	height: 35px;
+}
+.header .header-nav .header-nav-content .menu-btn {
+	display: none;
+	height: 50px;
+	line-height: 76px;
+	padding-right: 30px;
+	cursor: pointer;
+}
+.header .header-nav .header-nav-content .menu-btn img {
+	vertical-align: middle;
+}
+.header .header-nav .header-nav-content .nav-bar {
+	position: relative;
+	display: block;
+}
+.header .header-nav .header-nav-content .nav-bar a {
+	height: 76px;
+	line-height: 76px;
+	font-size: 1.6em;
+	display: inline-block;
+	text-align: center;
+	margin-right: 30px;
+}
+.header .header-nav .header-nav-content .nav-bar .focus {
+	color: #ff8f21 !important;
+}
+.header .header-nav .header-nav-content .nav-bar .focus:hover {
+	text-decoration: none;
+}
+.header .header-page-title {
+	position: absolute;
+	bottom: 60px;
+	width: 100%;
+	color: #FFF;
+	text-align: center;
+}
+.header .header-page-title .page-title {
+	font-size: 3.2em;
+    color: #fff;
+}
+.header .header-page-title .page-desc {
+	font-size: 1.2em;
+	padding-top: 20px;
+    color: #fff;
+}
+.header .header-bg {
+	overflow: hidden;
+	z-index: 10;
+}
+.header .header-bg img {
+	display: block;
+	border: 0;
+}
+
+.content {
+	width: 95%;
+	margin: 0 auto;
+	padding: 80px 0px;
+}
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px;
+}
+.content .content-generic-title {
+    color: #1c1c1c;
+}
+.content .content-generic-body {
+    color: #555454;
+}
+
+
+.footer {
+	padding: 0px 0px 40px 0px;
+	background-color: #005059;
+	color: #FFF;
+}
+.footer .ft-item-box {
+	width: 49%;
+	min-width: 300px;
+	padding-top: 60px;
+}
+.footer .ft-item-box .ft-box-title {
+	font-size: 1.4em;
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	padding-left: 30px;
+}
+.footer .ft-item-box .ft-box-content {
+	padding: 40px 0px 0px 30px;
+}
+.footer .ft-item-box .ft-box-content #sc_items .sc-item {
+	display: inline-block;
+	padding: 0px 20px 20px 0px;
+}
+.footer .ft-item-box .ft-box-content #sc_items .sc-item:hover {
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
+.footer .ft-item-box .ft-box-content #sc_sep {
+	width: 150px;
+	margin-top: 10px;
+	font-size: 1px;
+	line-height: 0;
+	height: 2px;
+	background-color: #FFF;
+}
+.footer .ft-item-box #link_content .link-item:first-child {
+	padding: 0px 0px 20px 0px !important;
+}
+.footer .ft-item-box #link_content .link-item {
+	color: #FFF !important;
+	display: block;
+	padding: 20px 0px;
+	width: 150px;
+	border-bottom-color: #FFF;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.footer .copyright {
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	padding-top: 80px;
+	text-align: center;
+}
+
+.fltrt {
+	float: right;
+}
+.fltlft {
+	float: left;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+@media screen and (max-width: 680px) {
+	.header {
+		font-size: 10px;
+	}
+	.header .header-nav .header-nav-content .logo {
+		width: 100px;
+		height: 59px;
+		padding-left: 0px;
+		text-align: right;
+		font-size: 2.4em;
+	}
+	.header .header-nav .header-nav-content .logo .logo-top{
+		height: 29px;
+	}
+	.header .header-nav .header-nav-content .menu-btn {
+		line-height: 59px;
+		display: block;
+		padding-right: 20px;
+	}
+	.header .header-nav .header-nav-content .nav-bar {
+		display: none;
+		width: 320px;
+		background-color: #005059;
+		position: absolute;
+		top: 81px;
+		right: 0;
+	}
+	.header .header-nav .header-nav-content .nav-bar a {
+		color: #FFF;
+		display: block;
+		text-align: right;
+	}
+	.footer .ft-item-box {
+		width: 95%;
+	}
+	.footer .copyright span {
+		display: block;
+	}
+	.footer .copyright {
+		text-align: left;
+		font-size: 0.8em;
+		padding-left: 30px;
+	}
+}
+</style>
+
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="{% static 'css/shCore.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/shThemeDefault.css' %}" type="text/css" rel="stylesheet">
+
+<script src="{% static 'js/jquery-1.8.2.min.js' %}"></script>
+<script>
+	function offset_header_image(header_image) {
+		var window_width = $(window).width();
+		if (window_width <= 1275) {
+			var offset = ($(window).width() - header_image.width()) / 2;
+		} else {
+			var offset = 0;
+		}
+		if (offset > 0) {
+			offset = 0;
+		}
+		header_image.css('margin-left', offset);
+	}
+	function adjust_iframe_height() {
+	    $('.image-box-frame').css('width', $('.box-content').width());
+		$('.image-box-frame').css('height', $('.image-box-frame').width() / 16 * 8);
+	}
+	$(document).ready(function(e) {
+		var menu = $('#nav_bar');
+		var header_image = $('#header_bg_image');
+		var scroll_to_top_buttom = $('.back-to-top');
+        $('#menu_btn').click(function(e) {
+			if (menu.css('display') == 'none') {
+				menu.slideDown(200);
+			} else {
+				menu.slideUp(200);
+			}
+			return false;
+		});
+		$('body').click(function(e) {
+		   if($(e.target).parent().attr('id') != 'nav_bar' && menu.css('display') != 'none' && $(document).width() <= 680) {
+			   	menu.slideUp(200);
+				return false;
+		   }
+		});
+		$(window).resize(function(e) {
+			if($(document).width() > 680 && menu.css('display') == 'none') {
+				menu.show();
+			}
+			offset_header_image(header_image);
+			adjust_iframe_height();
+		});
+		offset_header_image(header_image);
+		adjust_iframe_height();
+		$(document).scroll(function(){
+			if($(document).scrollTop() > 560) {
+				scroll_to_top_buttom.fadeIn(100);
+			} else {
+				scroll_to_top_buttom.fadeOut(100);
+			}
+		});
+		scroll_to_top_buttom.click(function(){
+			$('html, body').animate({scrollTop: 0}, 200); 
+		});
+    });
+</script>
+
+    <script>
+        $(document).ready(function(){
+            $.fn.placeholder();
+        })
+    </script>
+    <script>
+		function auto_grow(element) {
+			element.style.height = "5px";
+			element.style.height = (element.scrollHeight)+"px";
+		}
+	</script>
+	<script>
+		$(document).ready(function(){
+			var blog = $('.blog');
+
+			function adjust_blog_height() {
+				if ($(document).width() < 850) {
+					blog.css('height', 'auto');
+				} else {
+					var total_height = 0;
+					var sidebars = $('.side-bar');
+					for (i=0; i < sidebars.length; i++) {
+						total_height += $(sidebars[i]).height();
+					}
+					if (blog.height() < total_height) {
+						blog.css('height', total_height + 150);
+					}
+				}
+			}
+
+			$(window).resize(adjust_blog_height);
+			adjust_blog_height();
+		})
+	</script>
+
+    
+
+</head>
+	
+<body>
+
+<div class="container">
+	<div class="header">
+    	<div class="header-nav">
+        	<div class="header-nav-content">
+            	<a class="logo-click" href="/">
+                    <div class="logo fltlft">
+                        <div class="logo-top">
+                            <span>Qsing</span>
+                        </div>
+                        <div class="logo-buttom">
+                            <span>SITE</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="menu-btn fltrt" id="menu_btn">
+                	<img src="{% static 'images/back.png' %}" width="40">
+                </a>
+                <div class="nav-bar fltrt" id="nav_bar">
+                	<a class="nav-item focus" href="/">HOME</a>
+                    <a class="nav-item " href="#">BLOG</a>
+                    <a class="nav-item " href="#">BOX</a>
+                    <a class="nav-item " href="#">CONTACT</a>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        <!-- end .header-nav --></div>
+        <div class="header-page-title">
+        	<div class="page-title">
+            	<span>BLOG</span>
+            </div>
+            <div class="page-desc">
+            	<span>Enjoy when you can, and endure when you must.</span>
+            </div>
+        <!-- end .header-bg --></div>
+    	<div class="header-bg">
+       		<img id="header_bg_image" src="{% static 'images/head.jpg' %}" height="560">
+        <!-- end .header-bg --></div>
+    <!-- end .header --></div>
+ 
+ 	<div class="content">
+		
+	<div class="side-bar fltrt">
+		<div class="side-bar-box self-introduction">
+			<div class="sbar-title content-generic-title">
+				<span>ABOUT</span>
+			</div>
+			<div class="sbar-content">
+				<div class="avatar">
+					<img id="avatar" src="{% static 'images/head.jpg' %}" width="60%">
+				</div>
+				<div class="nickname">
+					<span>Qsing</span>
+				</div>
+				<div class="intro">
+					<p>I’m 	Qsing, and let me give you a warm welcome to visit my blog site. I hope you’ll enjoy it. Also, you can visit my <b><a href="/">HOME PAGE</a></b> to learn more about me.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="side-bar-box search">
+			<div class="sbar-title content-generic-title" id="search_title">
+				<span>SEARCH</span>
+			</div>
+			<div class="sbar-content" id="search_box">
+				<img id="search_icon" src="//static.dannysite.com/dcom/static/v5/images/search.png" width="40">
+				<div id="search_form_box">
+					<form id="search_form" action="/" method="get">
+						<input id="search_content" type="text" name="search" placeholder="FIND WHAT YOU WANT ...">
+					</form>
+				</div>
+			</div>
+		</div>
+	<div class="side-bar fltrt">
+		<div class="side-bar-box category">
+			<div class="sbar-title content-generic-title">
+				<span>CATEGORIES</span>
+			</div>
+			<div class="sbar-content">
+                
+		{% for class,count in classdic.items %}
+                    <a href="/?cat={{forloop.counter}}&page=1">
+                        <div class="cate-item">
+                            <div class="cate-name fltlft">
+                                <span>{{class}}</span>
+                            </div>
+                            <div class="cate-rank fltrt">
+                                <span id=cat{{forloop.counter}}>{{count}}</span>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </div>
+                    </a>
+			{% endfor %}                
+			</div>
+		</div>
+		<div class="side-bar-box extra">
+		</div>
+	</div>
+	<!-- end .side-bar --></div>
+
+	<div class="blog fltlft">
+		
+	{% for blog in blogs %}		
+<div class="blog-box">
+	<div class="blog-info">
+		<span class="blog-date text-highlight">APR {{ blog.publish_time|date:"Y-m-d H:i" }}</span><span class="dc-sep">/</span><a class="blog-category" href="/blog/{{blog.classification_id}}/?artn={{blog.id}}">{{blog.classification}}---{{blog.author}}</a>
+	</div>
+	<a href="/blog/{{blog.classification_id}}/?artn={{blog.id}}">
+		<div class="blog-title">
+			<span>{{ blog.caption }}</span>
+		</div>
+	</a>
+	
+	<div class="blog-content content-generic-body">
+		
+           <!-- <p>{{blog.content}}</p> -->
+       <p>{{blog.subcaption}}</p> 
+	</div>
+	<div class="blog-extra">
+		<a class="read-more" href="/blog/{{blog.classification_id}}/?artn={{blog.id}}">CONTINUE READING</a>
+	</div>
+	<div class="blog-sep"></div>
+<!-- end .blog-box --></div>
+{% endfor %}
+		
+		<div class="paginator">
+            
+            
+            
+                <a class="pageItem secondary" href="/?cat=1&amp;page=1"id="1">1</a>
+                
+            
+                <a class="pageItem secondary" href="/?cat=1&amp;page=2"id="2">2</a>
+                
+            
+                <a class="pageItem secondary" href="/?cat=1&amp;page=3"id="3">3</a>
+                <a class="pageItem secondary" href="/?cat=1&amp;page=4"id="4">4</a>
+                <a class="pageItem secondary" href="/?cat=1&amp;page=5"id="5">5</a>
+                
+                    
+                        <a class="pageItem master" href="/?cat=1&amp;page=2"id='next'><span>></span></a>
+                        <a class="pageItem master" href="/?cat=1&amp;page=2"id='last'>>></a>
+            
+        </div>
+	<!-- end .blog --></div>
+<script type="text/javascript">
+
+url=window.location.search;
+path=url.substring(1,url.length);
+if (path==""){
+$('#1').attr("class",'pageItem box-focus master')
+page=1
+type=""
+}
+else{
+page=path.split("&")[1].split("=")[1];
+type=path.split("&")[0].split("=")[1];
+if (type==""){
+mostpage={{count}}
+mostpage=Math.ceil(mostpage/2)
+}
+else{
+atbest=$("#cat"+type).html();
+mostpage=Math.ceil(atbest/2);
+}
+}
+if (page>2){
+	$('#1').before('<a class="pageItem master" href="/?cat=1&page=1"id="first"><span><<</span></a>')
+	$('#1').before('<a class="pageItem master" href="/?cat=1&page=2"id="before"><</a>')
+	for (var i=1;i<6;i++){
+		value=page-3+i
+		$("#"+i).text(value)
+		$("#"+i).attr("href","?cat="+type+"&page="+value)
+}
+}
+for (var i=1;i<6;i++){
+	html=$("#"+i).html()
+	if(page<3){
+		$("#"+i).attr("href","?cat="+type+"&page="+i)}
+	if(page==html){
+		$('#'+i).attr("class",'pageItem box-focus master')
+}
+}
+$("#first").attr('href','/?cat='+type+'&page=1')
+$("#before").attr('href','/?cat='+type+'&page='+(parseInt(page)-1))
+$("#next").attr('href','/?cat='+type+'&page='+(parseInt(page)+1))
+$("#last").attr('href','/?cat='+type+'&page='+mostpage)
+
+
+if ($("#5").html() > mostpage){
+	for (var i=5;i>0;i--){
+		if ($('#'+i).html()==mostpage){
+			if(page==mostpage){
+				$("#next").remove()
+				$("#last").remove()
+}
+			break
+}
+		$('#'+i).remove()
+}
+}
+</script>
+
+<!--标签页-->
+<!--右侧标签结束-->
+<div class="clearfloat"></div>
+</div>
+<!--总体结束-->
+
+<div class="footer">
+    	
+       
+        <div class="clearfloat"></div>
+        <div class="copyright">
+        	<span><i>Designed by <b>Qsing</b>.</i></span><span><i>Copyright 2018  <b>Qsing Project</b>.</i></span>
+        </div>
+    <!-- end .footer --></div>
+<!-- end .container --></div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+
+.side-bar {
+	width: 20%;
+	min-width: 250px;
+	padding-left: 50px;
+}
+.side-bar .side-bar-box {
+	padding-top: 60px;
+}
+.side-bar .side-bar-box .sbar-title {
+	font-size: 1.4em;
+	text-align: center;
+}
+.side-bar .side-bar-box .sbar-content {
+	padding-top: 20px;
+}
+.side-bar .self-introduction {
+	padding-top: 80px !important;
+	text-align: center;
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+}
+.side-bar .self-introduction .avatar #avatar {
+	border-radius: 50%;
+}
+.side-bar .self-introduction .nickname {
+	padding-top: 15px;
+	font-size: 1.4em;
+}
+.side-bar .self-introduction .intro {
+	padding-top: 15px;
+}
+.side-bar .category .cate-item {
+	padding: 20px 0px;
+	border-bottom-color: #dddddd;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.side-bar .search #search_box {
+	position: relative;
+	padding-top: 25px;
+}
+.side-bar .search #search_icon {
+	position: absolute;
+	bottom: 0;
+}
+.side-bar .search #search_form_box {
+	margin-left: 50px;
+	padding-bottom: 15px;
+	border-bottom-color: #dddddd;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	text-align: center;
+}
+.side-bar .search #search_form_box #search_form #search_content {
+	border: 0;
+	background-color: transparent;
+	width: 95%;
+	color: #555454;
+}
+.side-bar .extra {
+	padding-top: 60px;
+	text-align: center;
+}
+.read-more {
+	text-decoration: underline !important;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.content {
+	padding: 0px 0px 80px 0px !important;
+}
+.blog {
+	width: 70%;
+	min-width: 320px;
+}
+.blog .blog-box {
+	padding-top: 80px;
+}
+.blog .blog-box .blog-info {
+	font-size: 1.2em;
+}
+.blog .blog-box .blog-info .dc-sep {
+	padding: 0 10px;
+}
+.blog .blog-box .blog-info .blog-category {
+	font-weight: bold;
+}
+.blog .blog-box .blog-title {
+	font-size: 2em;
+	padding-top: 10px;
+	font-weight: bold;
+}
+.blog .blog-box .blog-content {
+	font-size: 1em;
+	padding-top: 30px;
+	line-height: 1.4em;
+	overflow: hidden;
+}
+.blog .blog-box .blog-content img {
+	max-width: 100% !important;
+}
+.blog .blog-box .blog-content .syntaxhighlighter .toolbar {
+	display: none !important;
+}
+.blog .blog-box .blog-extra {
+	padding-top: 25px;
+}
+.blog .blog-box .blog-sep {
+	width: 200px;
+	margin-top: 40px;
+	font-size: 1px;
+	line-height: 0;
+	height: 2px;
+	background-color: #dddddd;
+}
+.blog .blog-box .blog-cover {
+	padding-top: 10px;
+}
+.blog .blog-box .blog-cover img {
+	display: block;
+	border: 0;
+}
+.blog .paginator {
+	margin-top: 80px;
+}
+.blog .paginator a {
+	display: inline-block;
+	background-color: #f1f1f1;
+	width: 15px;
+	text-align: center;
+	*display: inline;
+	*zoom: 1;
+	padding: 1em;
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+}
+.blog .blog-tag {
+	padding-top: 20px;
+}
+.blog .blog-tag .tag-item {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 20px;
+	border: 2px solid #dddddd;
+	margin-right: 10px;
+}
+.blog .blog-recommends {
+	padding-top: 40px;
+}
+.blog .blog-recommends .title {
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	font-size: 1.4em;
+}
+.blog .blog-recommends .recommend-items {
+	padding-top: 20px;
+}
+.blog .blog-recommends .recommend-item {
+	display: block;
+	padding-top: 20px;
+}
+.blog .comments, .blog .comment-post-box {
+	padding-top: 40px;
+}
+.blog .comments .title {
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	font-size: 1.4em;
+}
+.blog .comments .comment-items .comment-item {
+	padding-top: 20px;
+}
+.blog .comments .comment-items .comment-item .comment-item-info {
+	font-weight: bold;
+}
+.blog .comments .comment-items .comment-item .comment-item-info .comment-date-day {
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	color: #e67c00;
+}
+.blog .comments .comment-items .comment-item .comment-item-info .dc-sep {
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	padding: 0px 5px;
+	color: #e67c00;
+}
+.blog .comments .comment-items .comment-item .comment-item-info .comment-date-month {
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	color: #e67c00;
+}
+.blog .comments .comment-items .comment-item .comment-item-info .comment-author {
+	padding-left: 15px;
+}
+.blog .comments .comment-items .comment-item .comment-item-content {
+	padding-top: 10px;
+	line-height: 1.4em;
+}
+.blog .comment-post-box .comment-post-form-box {
+	padding-top: 10px;
+}
+.blog .comment-post-box .comment-post-form-box .input-box-r1 {
+	position: relative;
+	width: 80%;
+	padding-top: 30px;
+}
+.blog .comment-post-box .comment-post-form-box .input-box-r2 {
+	position: relative;
+	padding-top: 30px;
+}
+.blog .comment-post-box .comment-post-form-box .comment-form-icon {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.blog .comment-post-box .comment-post-form-box .input-box-r1 div, .blog .comment-post-box .comment-post-form-box .input-box-r2 div {
+	margin-left: 50px;
+	padding-bottom: 15px;
+	border-bottom-color: #dddddd;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	text-align: center;
+}
+.blog .comment-post-box .comment-post-form-box textarea {
+	border: 0;
+	background-color: transparent;
+	color: #555454;
+	font-family: DengXian, 'Microsoft Yahei', Tahoma, Arial, Helvetica, Simsun, STHeiti;
+}
+.blog .comment-post-box .comment-post-form-box input {
+	width: 95%;
+	font-size: 1.2em;
+	border: 0;
+	background-color: transparent;
+	color: #555454;
+	font-family: DengXian, 'Microsoft Yahei', Tahoma, Arial, Helvetica, Simsun, STHeiti;
+}
+.blog .comment-post-box .comment-post-form-box textarea {
+	width: 96%;
+	min-width: 96%;
+	max-width: 96%;
+	font-size: 1.2em;
+}
+.blog .comment-post-box .comment-post-form-box .input-box-r3 {
+	padding-top: 50px;
+	text-align: center;
+}
+.blog .comment-post-box .comment-post-form-box .input-box-r3 a {
+	text-decoration: underline;
+	font-family: 'country_gothic', Arial, Helvetica, Simsun, STHeiti;
+	font-weight: bold;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+.blog .comment-post-box .error {
+	margin-top: 40px;
+	padding: 20px 40px;
+	font-size: 1.2em;
+	color: #FFF;
+	background-color: #F63;
+}
+@media screen and (max-width: 1150px) {
+	.blog {
+		width: 65%;
+	}
+}
+@media screen and (max-width: 950px) {
+	.blog {
+		width: 60%;
+	}
+}
+@media screen and (max-width: 850px) {
+	.blog {
+		width: 100%;
+	}
+	.side-bar {
+		width: 100%;
+		min-width: 250px;
+		padding-left: 0px;
+	}
+	.side-bar .self-introduction {
+		display: none;
+	}
+	.blog .paginator {
+		text-align: center;
+	}
+}
+@media screen and (max-width: 450px) {
+	.blog .paginator .secondary {
+		display: none;
+	}
+}
